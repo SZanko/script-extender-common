@@ -1,7 +1,7 @@
 #include "common/IConsole.h"
 #include <cstdarg>
 #include <cstring>
-#include <Windows.h>
+#include <windows.h>
 
 IConsole::IConsole()
 {

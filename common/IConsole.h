@@ -2,7 +2,7 @@
 
 #include "common/ITypes.h"
 #include "common/ISingleton.h"
-#include <Windows.h>
+#include <windows.h>
 
 /**
  *	Wrapper class for a standard Windows console
