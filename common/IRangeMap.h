@@ -56,7 +56,7 @@ public:
 			{
 				// collision check
 
-				EntryMapType::iterator	iter = m_entries.lower_bound(start);
+				typename EntryMapType::iterator	iter = m_entries.lower_bound(start);
 				// iter contains the first entry at or after start (or null)
 
 				if(iter == m_entries.begin())
@@ -79,7 +79,7 @@ public:
 						// we didn't get the first entry in the map
 						// and there is at least one entry in the map
 						// therefore there's an entry before iter
-						EntryMapType::iterator	preIter = iter;
+						typename EntryMapType::iterator	preIter = iter;
 						preIter--;
 
 						// check if this collides
@@ -89,7 +89,7 @@ public:
 						if(preEnd < start)
 						{
 							// cool, everything's fine, allocate it
-							EntryMapType::iterator	newEntry = m_entries.insert(preIter, EntryMapType::value_type(start, Entry()));
+							typename EntryMapType::iterator	newEntry = m_entries.insert(preIter, EntryMapType::value_type(start, Entry()));
 							entry = &newEntry->second;
 						}
 					}
