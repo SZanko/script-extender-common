@@ -151,14 +151,14 @@ public:
 
 	typename EntryMapType::iterator	LookupIter(t_key addr)
 	{
-		EntryMapType::iterator	result = m_entries.end();
+		typename EntryMapType::iterator	result = m_entries.end();
 
 		if(!m_entries.empty())
 		{
 			// we need to find the last entry less than or equal to addr
 
 			// find the first entry not less than addr
-			EntryMapType::iterator	iter = m_entries.lower_bound(addr);
+			typename EntryMapType::iterator	iter = m_entries.lower_bound(addr);
 
 			// iter is either equal to addr, greater than addr, or the end
 			if(iter == m_entries.end())
