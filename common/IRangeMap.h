@@ -112,7 +112,7 @@ public:
 	{
 		t_data	* result = NULL;
 
-		EntryMapType::iterator	iter = LookupIter(addr);
+		typename EntryMapType::iterator	iter = LookupIter(addr);
 		if(iter != m_entries.end())
 		{
 			if(base) *base = iter->first;
@@ -128,7 +128,7 @@ public:
 	{
 		bool result = false;
 
-		EntryMapType::iterator	iter = LookupIter(addr);
+		typename EntryMapType::iterator	iter = LookupIter(addr);
 		if(iter != m_entries.end())
 		{
 			if(base) *base = iter->first;
